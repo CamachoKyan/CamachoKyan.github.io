@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica 4</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{font-family: Impact; background-color: rgb(255, 233, 213);color:rgb(164, 0,0);}
+        header{background-color: rgb(108, 70,119);
+        padding: 40px;
+        text-align: center;
+        font-size: 40px;
+        color: white;}
+        nav{float: left;
+        width: 100%;
+        height: 400%;
+        background-color: rgb(76, 91, 129);
+        }
+        article{float: left;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        height: 200px;
+        color: rgb(43, 52, 81);}
+        section::after{
+            content: "";
+            display: table;
+            clear: both;}
+        footer{
+        background-color: rgb(251,218,179);
+        padding: 10px;
+        text-align: center;
+        color: black;}
+        @media(max-widgt: 600px){
+            nav,article{
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Neco Arc Posting</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="">Memes</a></li>
+                <li><a href="">Plantillas</a></li>
+                <li><a href="">Destacados</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h4>Frases Chistosas</h4>
+            <p>Buranya</p>
+            <p>Dori Dori Dori</p>
+            <p>YanYan Yaan</p>
+        </article>
+    </section>
+    <footer>Página Del Gato Chistoso Hecha Por Humor
+        <p>Kyan Camacho</p>
+    </footer>
+</body>
+</html>
