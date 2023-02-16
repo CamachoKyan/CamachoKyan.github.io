@@ -5,13 +5,45 @@
     <title>Galeria</title>
 
     <style>
+        div{
+            font-size: 30px;
+        }
+        .menu{
+            background-color: rgb(108, 70,119);
+        }
+        .menu:hover{
+            background-color:rgb(76, 91, 129);
+        }
         a{
-            font-size: 40px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contenido{
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-top: 15px;
+            padding: 15;
         }
     </style>
 </head>
 <body>
-    <h1>Fotos de un gato chistoso</h1>
+    <div style="border: 1px solid black;">
+        <div style="border-bottom: 1px solid black;" class="menu">
+        <a href="Practica6_noticias.html">Noticias</a>
+        </div>
+
+        <div style="border-bottom: 1px solid black;" class="menu">
+        <a href="Practica6_galeria.html">Galeria</a>
+        </div>
+        
+        <div style="border-bottom: 1px solid black;" class="menu">
+        <a href="Practica6_contactos.html">Contactos</a>
+    </div>
+
+    </div>
+
+    <div class="contenido">
+        <h1>Fotos de un gato chistoso</h1>
     <div style="border: 2px solid black; width: 33%;"></div>
     <img src="NAdance.gif" alt="300">
     <img src="NAsleep.gif" alt="300">
@@ -19,5 +51,6 @@
 
     <div style="border-bottom: 1px solid black; padding: 10px; background-color: rgb(108, 70,119);"></div>
     <a href="Practica6.html">Regresar al Inicio</a>
+    </div>
 </body>
 </html>

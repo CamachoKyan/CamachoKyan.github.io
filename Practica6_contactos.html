@@ -4,17 +4,57 @@
     <meta charset="UTF-8">
     <title>Navegación HTML</title>
 
+    <style>
+        div{
+            font-size: 30px;
+        }
+        .menu{
+            background-color: rgb(108, 70,119);
+        }
+        .menu:hover{
+            background-color:rgb(76, 91, 129);
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contenido{
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-top: 15px;
+            padding: 15;
+        }
+    </style>
+    
 </head>
 <body>
-    <h1>Contactos</h1>
-    <h3>Correo Electronico</h3>
+    <div style="border: 1px solid black;">
+        <div style="border-bottom: 1px solid black;" class="menu">
+        <a href="Practica6_noticias.html">Noticias</a>
+        </div>
 
-    <p>Tu@cetis.edu.mx</p>
+        <div style="border-bottom: 1px solid black;" class="menu">
+        <a href="Practica6_galeria.html">Galeria</a>
+        </div>
+        
+        <div style="border-bottom: 1px solid black;" class="menu">
+        <a href="Practica6_contactos.html">Contactos</a>
+    </div>
 
-    <h2>Ubicación</h2>
+    </div>
 
-    <img src="Map.png" alt="250px"width="250px">
-    <div style="border-bottom: 1px solid black; padding: 10px; background-color: rgb(108, 70,119);"></div>
-    <a href="Practica6.html" style="font-size: 60px;">Regresar al Inicio</a>
+    <div class="contenido">
+        <h1>Contactos</h1>
+        <h3>Correo Electronico</h3>
+    
+        <p>Tu@cetis.edu.mx</p>
+    
+        <h2>Ubicación</h2>
+    
+        <img src="Map.png" alt="250px"width="250px">
+        <div style="border-bottom: 1px solid black; padding: 10px; background-color: rgb(108, 70,119);"></div>
+        <a href="Practica6.html" style="font-size: 60px;">Regresar al Inicio</a>
+    </div>
+   
 </body>
 </html>
