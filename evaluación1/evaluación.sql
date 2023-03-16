@@ -12,7 +12,6 @@ CREATE TABLE animales_zoologico (
   promedio_vida INT
 );
 
--- Insertar 15 registros en la tabla "animales_zoologico"
 INSERT INTO animales_zoologico (nombre, especie, habitat, alimentacion, tamano, promedio_vida)
 VALUES
   ('León', 'Panthera leo', 'Savanna', '1', 'Grande', '14'),
