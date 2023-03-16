@@ -2,57 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portafolio</title>
+    <title>Trabajo Final</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
     <style>
-        h1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
-        a{color: cornsilk; font-size: x-large; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; padding: 5px;}
-         a:link {text-decoration: none}
-        div{
-           
-           background-color:rgb(76, 91, 129);
+        body{background-color: rgb(76, 91, 129); color: black;}
+        nav{
+          background-color:rgb(108, 70,119);
+          font-weight: bold;
         }
-        .menu{
-            transition: fonts-size 1s linear;
-            background-color:  rgb(108, 70,119);
+        
+        .navbar-brand{font-weight: bolder;}
+        
+        a{
+          color: white;
         }
-        body{background-color: slategrey;}
+        img{width: 100%; 
+          height: 400px;
+        }
+        
+        .US{width: 40%; 
+        border: 2px solid black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .E{width: 5%; border: 2px solid black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+        label{color: black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+        input{color: black;}
     </style>
 </head>
 <body>
-    <h1>Parcial 1</h1><h1>Portafolio De Camacho Kyan</h1>
-    
-    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand">Neco Arc Posting</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Final.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="https://typemoon.fandom.com/wiki/Neco-Arc">¿Quién es Neco Arc?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="Final1.html">Posts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-    <div> <img src="Y.gif" align="right" alt="575px" width="575px">
-            <hr>
-            <a class="menu" href="Practica1" target="_blank">Practica 1 - Etiquetas Basicas HTML</a>
-            <br><br>
-            <a class="menu" href="Practica2" target="_blank">Practica 2 - Aplicando CSS</a>
-            <br><br>
-            <a class="menu" href="Practica3" target="_blank">Practica 3 - Hipervínculos En HTML</a>
-            <br><br>
-            <a class="menu" href="Practica4" target="_blank">Practica 4 - Aplicando Layouts</a>
-            <br><br>
-            <a class="menu" href="Practica5" target="_blank">Practica 5 - Formulario En HTML</a>
-            <br><br>
-            <a class="menu" href="Practica6" target="_blank">Practica 6 - Navegación En HTML</a>
-            <br><br>
-            <a class="menu" href="Practica7" target="_blank">Practica 7 - Utilizando Bootstrap</a>
-            <br><br>
-            <a class="menu" href="Practica8" target="_blank">Practica 8 - Tablas Con Bootstrap</a>
-            <br><br>
-            <a class="menu" href="Practica9" target="_blank">Practica 9 - Menú De Navegación</a>
-            <br><br>
-            <a class="menu" href="productos.sql" target="_blank">Practica 10 - Base De Datos Productos</a>
-            <br><br>
-            <a class="menu" href="usuarios.sql" target="_blank">Practica 11.1 - Base De Datos Usuarios</a>
-            <br><br>
-            <a class="menu" href="categoria.sql" target="_blank">Practica 11.2 - Base De Datos Categorias</a>
-            <br><br>
-            <a class="menu" href="Practica012" target="_blank">Practica 12 - Tienda Online</a>
-            <br><hr>
-             <a class="menu" href="Final" target="_blank">Proyecto Final - Neco Arc Posting</a>
-            <br><hr>
-    </div>
+      <img src="NAD.gif" alt="">
+      <br><br>
+      <h1>Bienvenido A Neco Arc Posting</h1>
+      <h3>Esta Página Web Esta Creada Para Compartir Y Ver Memes Relacionados Con Neco Arc</h3>
+      <h3>Registrate Para Poder Empezar A Subir Posts</h3>
+      <br><br>
+      <input class="US" type="text" placeholder="Escribe Tu Usuario" required="">
+      <br><br>
+      <input class="E" type="text" placeholder="Edad" required="">
+      <br><br>
+      <label for="Variante De Neco Arc">Variante De Neco Arc De Tu Perfil</label>
+      <select name="Variante De Neco Arc" id="">
+        <option value="Arc">Arc</option>
+        <option value="Bubbles">Bubbles</option>
+        <option value="Chaos">Chaos</option>
+        <option value="Destiny">Destiny</option>
+        <option value="Evolution">Evolution</option>
+        <option value="Mysterious Neco Z">Mysterious Neco Z</option>
+    </select>
+    <br><br>
+    <p>Verifiación <input type="checkbox" name="Verifiación"></p> 
+    <br><br>
+    <h1>Ahora Despues De Completar Estos Pasos Estas Listo Para Empezar A Postear</h1>
+    <br><br>
+    <h4>Seleccionar Archivo</h4>
+    <input type="file" accept="png/jpg">
+    <br>
+    <input type="submit" value="Subir Archivo">
+      <script src="js/jquery-3.6.3.js"></script>
+      <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>
