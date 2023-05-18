@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Registrar Película</title>
+</head>
+<body>
+  <div class="container mt-4">
+    <h1>Registrar Película</h1>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre de la película" required>
+      </div>
+      <div class="form-group">
+        <label for="sinopsis">Sinopsis:</label>
+        <textarea class="form-control" id="sinopsis" rows="4" placeholder="Ingrese la sinopsis de la película" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="duracion">Duración:</label>
+        <input type="time" class="form-control" id="duracion" step="60" required>
+      </div>
+      <div class="form-group">
+        <label for="clasificacion">Clasificación:</label>
+        <select class="form-control" id="clasificacion" required>
+          <option value="">Seleccionar</option>
+          <option value="AA">AA - Todo Público con restricción</option>
+          <option value="A">A - Mayores de 18 años</option>
+          <option value="B">B - Mayores de 12 años</option>
+          <option value="B15">B15 - Mayores de 15 años</option>
+          <option value="C">C - Mayores de 15 años con restricción</option>
+          <option value="D">D - Mayores de 18 años con restricción</option>
+          <option value="E">E - Exclusiva para adultos</option>
+        </select>
+      </div>
+      <div class="mt-4">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="button" class="btn btn-secondary">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
