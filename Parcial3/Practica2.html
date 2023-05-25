@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Practica 2</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de alumno</h1>
+        <form action="">
+            <div class="form-group">
+                <label for="">Nombre</label>
+                <input name="nombre" type="text" class="form-control">
+            </div><br>
+            <div class="form-group">
+                <label for="">Edad</label>
+                <input name="edad" type="number" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Escuela:</label>
+                <select name="escuela" class="form-control">
+                    <option value="">Selecciona una Escuela</option>
+                    <option value="Cetis 107">Cetis 107</option>
+                    <option value="CBTIS 224">CBTIS 224</option>
+                    <option value="COBAES">COBAES</option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <label for="">Fecha De Ingreso:</label>
+                <input name="fecha_ingreso" type="date" class="form-control">
+            </div><br>
+            <div class="form-group">
+                <label for="">Dirección</label>
+                <textarea name="direccion" cols="30" rows="4" class="form-control"></textarea>
+            </div><br>
+            <div>
+                <input type="submit" class="btn btn-primary">
+            </div><br>
+        </form>
+    </div>
+</body>
+</html>
