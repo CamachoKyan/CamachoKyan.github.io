@@ -13,14 +13,66 @@
 
    $Calificacion = 0;
 
-   if(Pregunta01 == "C"){
+   if($Pregunta01 == "C"){
     $Calificacion++;
-    echo "Respuesta Correcta ✔";
+    echo "Respuesta Correcta ✔ <br>";
    }else{
-    echo "Respuesta Incorrecta ✘";
+    echo "Respuesta Incorrecta ✘ <br>";
    }
-   
-
-
+   if($Pregunta02 == "B"){
+      $Calificacion++;
+      echo "Respuesta Correcta ✔ <br>";
+     }else{
+      echo "Respuesta Incorrecta ✘ <br>";
+     }
+     if($Pregunta03 == "C"){
+      $Calificacion++;
+      echo "Respuesta Correcta ✔ <br>";
+     }else{
+      echo "Respuesta Incorrecta ✘ <br>";
+     }
+     if($Pregunta04 == "B"){
+      $Calificacion++;
+      echo "Respuesta Correcta ✔ <br>";
+     }else{
+      echo "Respuesta Incorrecta ✘ <br>";
+     }
+     if($Pregunta05 == "A"){
+      $Calificacion++;
+      echo "Respuesta Correcta ✔ <br>";
+     }else{
+      echo "Respuesta Incorrecta ✘ <br>";
+     }
+     if($Pregunta06 == "C"){
+      $Calificacion++;
+      echo "Respuesta Correcta ✔ <br>";
+     }else{
+      echo "Respuesta Incorrecta ✘ <br>";
+     }
+     if($Pregunta07 == "A"){
+      $Calificacion++;
+      echo "Respuesta Correcta ✔ <br>";
+     }else{
+      echo "Respuesta Incorrecta ✘ <br>";
+     }
+     if($Pregunta08 == "B"){
+      $Calificacion++;
+      echo "Respuesta Correcta ✔ <br>";
+     }else{
+      echo "Respuesta Incorrecta ✘ <br>";
+     }
+     if($Pregunta09 == "A"){
+      $Calificacion++;
+      echo "Respuesta Correcta ✔ <br>";
+     }else{
+      echo "Respuesta Incorrecta ✘ <br>";
+     }
+     if($Pregunta10 == "C"){
+      $Calificacion++;
+      echo "Respuesta Correcta ✔ <br>";
+     }else{
+      echo "Respuesta Incorrecta ✘ <br>";
+     }
+     
 
 ?>

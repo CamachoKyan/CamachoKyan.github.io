@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juego del Gato</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        td {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            text-align: center;
+            font-size: 36px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <?php
+        // Función para verificar si hay un ganador
+        function checkWinner($board) {
+            // Comprobación de filas
+            for ($i = 0; $i < 3; $i++) {
+                if ($board[$i][0] != '' && $board[$i][0] == $board[$i][1] && $board[$i][0] == $board[$i][2]) {
+                    return $board[$i][0];
+                }
+            }
+            
+            // Comprobación de columnas
+            for ($j = 0; $j < 3; $j++) {
+                if ($board[0][$j] != '' && $board[0][$j] == $board[1][$j] && $board[0][$j] == $board[2][$j]) {
+                    return $board[0][$j];
+                }
+            }
+            
+            // Comprobación de diagonales
+            if ($board[0][0] != '' && $board[0][0] == $board[1][1] && $board[0][0] == $board[2][2]) {
+                return $board[0][0];
+            }
+            
+            if ($board[0][2] != '' && $board[0][2] == $board[1][1] && $board[0][2] == $board[2][0]) {
+                return $board[0][2];
+            }
+            
+            // No hay ganador
+            return null;
+        }
+        
+        // Inicializar el tablero del juego
+        $board = [
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', '']
+        ];
+        
+        // Obtener la posición del clic del jugador
+        if (isset($_POST['position'])) {
+            $position = $_POST['position'];
+            $row = floor($position / 3);
+            $col = $position % 3;
+            
+            // Verificar si la celda está vacía
+            if ($board[$row][$col] == '') {
+                // Establecer el símbolo del jugador actual
+                $symbols = ['X', 'O'];
+                $currentSymbol = $symbols[count(array_filter($board)) % 2];
+                
+                // Asignar el símbolo del jugador a la celda
+                $board[$row][$col] = $currentSymbol;
+            }
+        }
+        
+        // Verificar si hay un ganador
+        $winner = checkWinner($board);
+        ?>
+        
+        <table>
+            <?php for ($i = 0; $i < 3; $i++): ?>
+                <tr>
+                    <?php for ($j = 0; $j < 3; $j++): ?>
+                        <td>
+                            <form method="POST">
+                                <input type="hidden" name="position" value="<?php echo $i * 3 + $j; ?>">
+                                <input type="submit" value="<?php echo $board[$i][$j]; ?>" <?php if ($board[$i][$j] != '') echo 'disabled'; ?>>
+                            </form>
+                        </td>
+                    <?php endfor; ?>
+                </tr>
+            <?php endfor; ?>
+        </table>
+        
+        <?php if ($winner): ?>
+            <p>¡Ha ganado el jugador <?php echo $winner; ?>!</p>
+        <?php endif; ?>
+    </div>
+</body>
+</html>
