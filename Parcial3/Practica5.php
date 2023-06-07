@@ -2,10 +2,21 @@
 
 $cuadros = $_POST["cuadro"];
 
-$RedFlag = 0;
-
 //var_dump($cuadros);
 
+echo "<h1>Resultado Final</h1><h1>";
+
+//Imprimir resultado
+for($i=0;$i<9;$i++){
+    echo "[$cuadros[$i]]";
+
+    if($i==2 || $i==5){
+        echo "<br>";
+    }
+}
+echo "</h1>";
+
+//Definir Ganador
 /*
 [0][1][2]
 [3][4][5]
