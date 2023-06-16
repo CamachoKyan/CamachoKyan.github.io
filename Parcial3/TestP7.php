@@ -22,13 +22,22 @@
             background-color: transparent;
         }
         .Jugador:before {
-            content: "■";
+            content: "";
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 20px;
-            color: red;
+            width: 80%;
+            height: 80%;
+            background-color: green;
+            border-radius: 50%;
+        }
+        .numero-esquina {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px;
+            background-color: white;
         }
     </style>
 </head>
@@ -48,10 +57,29 @@
         }
 
         $Jugador = $_POST['Jugador'] ?? 0;
+        $UltimoDado = $_POST['UltimoDado'] ?? 0;
 
         if (isset($_POST['Dado'])) {
-            $Jugador += rand(1, 6);
-            $Jugador = max(0, min(100, $Jugador));
+            $dado = rand(1, 6);
+            $Jugador += $dado;
+            $Jugador = max(0, min(99, $Jugador));
+            $UltimoDado = $dado;
+
+            if ($Jugador == 100) {
+                ob_clean(); // Limpiar el búfer de salida
+
+                echo "<h2>¡Has ganado!</h2>";
+                echo "<form action='' method='POST'>";
+                echo "<input type='submit' name='Reiniciar' value='Jugar de nuevo'>";
+                echo "</form>";
+
+                // Reiniciar el juego si se presiona el botón "Jugar de nuevo"
+                if (isset($_POST['Reiniciar'])) {
+                    $Jugador = 0;
+                }
+
+                exit; // Salir del script después de mostrar el mensaje
+            }
         }
 
         echo "<form action='' method='POST'>";
@@ -59,16 +87,17 @@
         foreach ($Tabla as $Fila) {
             echo "<tr>";
             foreach ($Fila as $Val) {
-                echo "<td" . (($Val == $Jugador) ? " class='Jugador'" : '') . ">" . $Val . "</td>";
+                echo "<td" . (($Val == $Jugador) ? " class='Jugador'" : '') . ">";
+                echo "<span class='numero-esquina'>$Val</span>";
+                echo "</td>";
             }
             echo "</tr>";
         }
         echo "</table>";
+        echo "<p>Último dado: " . $UltimoDado . "</p>";
         echo "<input type='hidden' name='Jugador' value='$Jugador'>";
+        echo "<input type='hidden' name='UltimoDado' value='$UltimoDado'>";
         echo "<input type='submit' name='Dado' value='Lanzar Dado'>";
-        if($Jugador == 100){
-            echo "<h1>Has Ganado</h1>";
-        }
         echo "</form>";
     ?>
 
