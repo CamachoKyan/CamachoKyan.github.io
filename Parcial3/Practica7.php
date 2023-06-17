@@ -22,14 +22,17 @@
             background-color: transparent;
         }
         .Jugador:before {
-            content: "■";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 20px;
-            color: red;
-        }
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-image: url(Snake.gif);
+    background-size: cover; /* o ajusta según tus necesidades */
+}
+
     </style>
 </head>
 <body>
@@ -66,7 +69,7 @@
         echo "</table>";
         echo "<input type='hidden' name='Jugador' value='$Jugador'>";
         echo "<input type='submit' name='Dado' value='Lanzar Dado'>";
-        if($Jugador == 100){
+        if($Jugador >= 100){
             echo "<h1>Has Ganado</h1>";
         }
         echo "</form>";
